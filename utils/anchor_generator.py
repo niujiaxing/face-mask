@@ -1,4 +1,3 @@
-# -*- encoding=utf-8 -*-
 import numpy as np
 
 def generate_anchors(feature_map_sizes, anchor_sizes, anchor_ratios, offset=0.5):

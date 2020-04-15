@@ -10,7 +10,7 @@ from utils.anchor_generator import generate_anchors
 from utils.anchor_decode import decode_bbox
 from utils.nms import single_class_non_max_suppression
 from load_model.tensorflow_loader import load_tf_model, tf_inference
-
+from utils.notice import notice
 sess, graph = load_tf_model('models/face_mask_detection.pb')
 # anchor configuration
 feature_map_sizes = [[33, 33], [17, 17], [9, 9], [5, 5], [3, 3]]
@@ -81,6 +81,7 @@ def inference(image,
                 color = (0, 255, 0)
             else:
                 color = (255, 0, 0)
+                notice()
             cv2.rectangle(image, (xmin, ymin), (xmax, ymax), color, 2)
             cv2.putText(image, "%s: %.2f" % (id2class[class_id], conf), (xmin + 2, ymin - 2),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, color)
@@ -92,10 +93,6 @@ def inference(image,
 
 
 def run_on_video(video_path, output_video_name, conf_thresh):
-    """
-
-    :rtype: object
-    """
     cap = cv2.VideoCapture(video_path)
     height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
@@ -150,13 +147,7 @@ if __name__ == "__main__":
             print("请输入图片的url:")
             args.img_path = input()
         def exp_imgcvt(img):
-            '''
-            @author niu
-            @function 解决图片路径错误的异常
-            :param img:
-            :return:
-            '''
-
+            "' :exception'"
             try:
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
                 return img
