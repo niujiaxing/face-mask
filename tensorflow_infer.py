@@ -146,7 +146,13 @@ if __name__ == "__main__":
             print("请输入图片的url:")
             args.img_path = input()
         def exp_imgcvt(img):
-            "' :exception'"
+            '''
+            @author niu
+            @function 解决图片路径错误的异常
+            :param img:
+            :return:
+            '''
+
             try:
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
                 return img
