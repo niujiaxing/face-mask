@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_tensorflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_tensorflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensorflow_infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow_infer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow_infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Runmodle/tensorflow_infer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tensorflow_infer (1)">
     <configuration name="main_tensorflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FaceMask2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,8 +49,54 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tensorflow_infer (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FaceMask2.0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensorflow_infer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tensorflow_infer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FaceMask2.0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Runmodle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\python_work\project\newpro\Face_Mask2.0\tensorflow_infer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tensorflow_infer (1)" />
+        <item itemvalue="Python.tensorflow_infer" />
         <item itemvalue="Python.main_tensorflow" />
       </list>
     </recent_temporary>
@@ -67,7 +112,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586934766006</updated>
       <workItem from="1586934774657" duration="1500000" />
-      <workItem from="1586937015097" duration="1327000" />
+      <workItem from="1586937015097" duration="1624000" />
+      <workItem from="1586938700451" duration="270000" />
     </task>
     <servers />
   </component>
@@ -79,40 +125,47 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586934916591" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1586938064814">
+    <state width="1323" height="76" key="GridCell.Tab.0.bottom" timestamp="1586938990871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1586938064814">
+    <state width="1323" height="76" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586938990871" />
+    <state width="1323" height="76" key="GridCell.Tab.0.center" timestamp="1586938990870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1586938064814">
+    <state width="1323" height="76" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586938990870" />
+    <state width="1323" height="76" key="GridCell.Tab.0.left" timestamp="1586938990870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1586938064814">
+    <state width="1323" height="76" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586938990870" />
+    <state width="1323" height="76" key="GridCell.Tab.0.right" timestamp="1586938990870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
+    <state width="1323" height="76" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586938990870" />
+    <state width="1323" height="107" key="GridCell.Tab.1.bottom" timestamp="1586938640663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="107" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586938640663" />
+    <state width="1323" height="107" key="GridCell.Tab.1.center" timestamp="1586938640663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="107" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586938640663" />
+    <state width="1323" height="107" key="GridCell.Tab.1.left" timestamp="1586938640663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="107" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586938640663" />
+    <state width="1323" height="107" key="GridCell.Tab.1.right" timestamp="1586938640663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="107" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586938640663" />
     <state x="184" y="5" key="SettingsEditor" timestamp="1586936003385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586936003385" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tensorflow_infer.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586938064541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer__1_.coverage" NAME="tensorflow_infer (1) Coverage Results" MODIFIED="1586938990849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FaceMask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586934944230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer.coverage" NAME="tensorflow_infer Coverage Results" MODIFIED="1586938959436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Runmodle" />
   </component>
 </project>
