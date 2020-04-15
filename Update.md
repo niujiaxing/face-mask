@@ -21,11 +21,11 @@ njx
 python tensorflow_infer.py  --img-path /path/to/your/img
 如果您要在视频上跑，只需要：
 
-python tensorflow.py --img-mode 0 --video-path /path/to/video  
+python tensorflow_infer.py --img-mode 0 --video-path /path/to/video  
 ### 如果要打开本地摄像头, video_path填写0就可以了，如下
-python tensorflow.py --img-mode 0 --video-path 0
----
 
+---
+####python tensorflow_infer.py --img-mode 0 --video-path 0
 ---
 ##存在问题汇总以及需求
 - [ ] 存在多个模型，搞清楚那些文件是必须的，清理多余文件
