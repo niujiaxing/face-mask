@@ -92,6 +92,10 @@ def inference(image,
 
 
 def run_on_video(video_path, output_video_name, conf_thresh):
+    """
+
+    :rtype: object
+    """
     cap = cv2.VideoCapture(video_path)
     height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
