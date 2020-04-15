@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="" />
+    <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_tensorflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_tensorflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow_infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow_infer.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aZEYm2fw5GPlDScYD8c5vfsmLr" />
   <component name="ProjectViewState">
@@ -15,6 +22,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -59,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586934766006</updated>
       <workItem from="1586934774657" duration="1500000" />
+      <workItem from="1586937015097" duration="1327000" />
     </task>
     <servers />
   </component>
@@ -70,28 +79,40 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586934916591" />
-    <state width="1323" height="14" key="GridCell.Tab.0.bottom" timestamp="1586935003661">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1586938064814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="14" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586935003661" />
-    <state width="1323" height="14" key="GridCell.Tab.0.center" timestamp="1586935003661">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1586938064814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="14" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586935003661" />
-    <state width="1323" height="14" key="GridCell.Tab.0.left" timestamp="1586935003661">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1586938064814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="14" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586935003661" />
-    <state width="1323" height="14" key="GridCell.Tab.0.right" timestamp="1586935003661">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1586938064814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="14" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586935003661" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586938064814" />
     <state x="184" y="5" key="SettingsEditor" timestamp="1586936003385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586936003385" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tensorflow_infer.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586938064541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FaceMask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586934944230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -136,28 +136,26 @@ if __name__ == "__main__":
     parser.add_argument('--video-path', type=str, default='0', help='path to your video, `0` means to use camera.')
     # parser.add_argument('--hdf5', type=str, help='keras hdf5 file')
     args = parser.parse_args()
-    ##################################################
-    #update
-    #niu
-    if not args.img_path:
-        print("请输入图片的url:")
-        args.img_path = input()
-
-    def exp_imgcvt(img):
-        "' :exception'"
-        try:
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            return img
-        except Exception:
-            print("请输入正确的图片path")
-            imgPath = input()
-            img = cv2.imread(imgPath)
-            exp_imgcvt(img)
-
-    ######################################################
 
 
     if args.img_mode:
+        ##################################################
+        # update
+        # niu
+        if not args.img_path:
+            print("请输入图片的url:")
+            args.img_path = input()
+        def exp_imgcvt(img):
+            "' :exception'"
+            try:
+                img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                return img
+            except Exception:
+                print("请输入正确的图片path")
+                imgPath = input()
+                img = cv2.imread(imgPath)
+                exp_imgcvt(img)
+        ######################################################
         imgPath = args.img_path
         img = cv2.imread(imgPath)
         ####################################################
