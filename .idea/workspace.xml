@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/FaceMask2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FaceMask2.0.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update.md" beforeDir="false" afterPath="$PROJECT_DIR$/Update.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensorflow_infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow_infer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/anchor_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/anchor_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/notice.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/notice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +156,9 @@
       <workItem from="1586934774657" duration="1500000" />
       <workItem from="1586937015097" duration="1624000" />
       <workItem from="1586938700451" duration="4054000" />
+      <workItem from="1586943268671" duration="206000" />
+      <workItem from="1586948539992" duration="764000" />
+      <workItem from="1586949461080" duration="2499000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586939350505</created>
@@ -195,22 +194,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586940068428" />
-    <state width="1323" height="60" key="GridCell.Tab.0.bottom" timestamp="1586942761185">
+    <state width="1323" height="173" key="GridCell.Tab.0.bottom" timestamp="1586943485191">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="60" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586942761185" />
-    <state width="1323" height="60" key="GridCell.Tab.0.center" timestamp="1586942761185">
+    <state width="1323" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586943485191" />
+    <state width="1323" height="173" key="GridCell.Tab.0.center" timestamp="1586943485190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="60" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586942761185" />
-    <state width="1323" height="60" key="GridCell.Tab.0.left" timestamp="1586942761185">
+    <state width="1323" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586943485190" />
+    <state width="1323" height="173" key="GridCell.Tab.0.left" timestamp="1586943485190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="60" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586942761185" />
-    <state width="1323" height="60" key="GridCell.Tab.0.right" timestamp="1586942761185">
+    <state width="1323" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586943485190" />
+    <state width="1323" height="173" key="GridCell.Tab.0.right" timestamp="1586943485190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="60" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586942761185" />
+    <state width="1323" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586943485190" />
     <state width="1323" height="107" key="GridCell.Tab.1.bottom" timestamp="1586938640663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -227,10 +226,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="107" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586938640663" />
-    <state x="184" y="5" key="SettingsEditor" timestamp="1586936003385">
+    <state x="184" y="5" key="SettingsEditor" timestamp="1586954890902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586936003385" />
+    <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586954890902" />
     <state x="475" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586939297819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -239,7 +238,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Face_Mask2_0$notice.coverage" NAME="notice Coverage Results" MODIFIED="1586940904771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer__1_.coverage" NAME="tensorflow_infer (1) Coverage Results" MODIFIED="1586942554566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586942600146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586943369315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FaceMask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586934944230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer.coverage" NAME="tensorflow_infer Coverage Results" MODIFIED="1586938959436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Runmodle" />
   </component>
