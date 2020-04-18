@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/video.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensorflow_infer_niu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update.md" beforeDir="false" afterPath="$PROJECT_DIR$/Update.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_tensorflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_tensorflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensorflow_infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow_infer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/notice.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/notice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +213,7 @@
       <workItem from="1586948539992" duration="764000" />
       <workItem from="1586949461080" duration="2499000" />
       <workItem from="1587010184888" duration="20592000" />
-      <workItem from="1587178636628" duration="1734000" />
+      <workItem from="1587178636628" duration="2563000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586939350505</created>
@@ -264,22 +257,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587109479667" />
-    <state width="1323" height="259" key="GridCell.Tab.0.bottom" timestamp="1587180339948">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom" timestamp="1587182194454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587180339948" />
-    <state width="1323" height="259" key="GridCell.Tab.0.center" timestamp="1587180339947">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
+    <state width="1323" height="136" key="GridCell.Tab.0.center" timestamp="1587182194454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587180339947" />
-    <state width="1323" height="259" key="GridCell.Tab.0.left" timestamp="1587180339947">
+    <state width="1323" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
+    <state width="1323" height="136" key="GridCell.Tab.0.left" timestamp="1587182194454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587180339947" />
-    <state width="1323" height="259" key="GridCell.Tab.0.right" timestamp="1587180339947">
+    <state width="1323" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
+    <state width="1323" height="136" key="GridCell.Tab.0.right" timestamp="1587182194454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587180339947" />
+    <state width="1323" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
     <state width="1323" height="175" key="GridCell.Tab.1.bottom" timestamp="1587115764423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
