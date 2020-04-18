@@ -1,4 +1,9 @@
-# -*- coding:utf-8 -*-
+#test more_thread
+import threading
+import time
+from utils import notice
+import os
+global score
 import cv2
 import time
 import argparse
@@ -16,7 +21,6 @@ sess, graph = load_tf_model('models/face_mask_detection.pb')
 feature_map_sizes = [[33, 33], [17, 17], [9, 9], [5, 5], [3, 3]]
 anchor_sizes = [[0.04, 0.056], [0.08, 0.11], [0.16, 0.22], [0.32, 0.45], [0.64, 0.72]]
 anchor_ratios = [[1, 0.62, 0.42]] * 5
-global class_id
 
 
 # generate anchors
@@ -26,7 +30,6 @@ anchors = generate_anchors(feature_map_sizes, anchor_sizes, anchor_ratios)
 # so we expand dim for anchors to [1, anchor_num, 4]
 anchors_exp = np.expand_dims(anchors, axis=0)
 id2class = {0: 'Mask', 1: 'NoMask'}
-
 
 def inference(image,
               conf_thresh=0.5,
@@ -61,13 +64,15 @@ def inference(image,
     bbox_max_score_classes = np.argmax(y_cls, axis=1)
 
     # keep_idx is the alive bounding box after nms.
+    #this has a bbbbbbbbbbbbbuuuuuuuuuuuugggggggggggggggg
     keep_idxs = single_class_non_max_suppression(y_bboxes,
                                                  bbox_max_scores,
                                                  conf_thresh=conf_thresh,
                                                  iou_thresh=iou_thresh,
                                                  )
-
+    # times = 0
     for idx in keep_idxs:
+        # times += 1
         conf = float(bbox_max_scores[idx])
 
         class_id = bbox_max_score_classes[idx]
@@ -84,8 +89,12 @@ def inference(image,
                 color = (0, 255, 0)
             else:
                 color = (255, 0, 0)
-                ###################
-                #这一帧没有佩戴口罩
+                # print(times)
+                # if times % 20 == 0:
+                    ###################
+                    # t = MyThread(1, "thread:1", 1)
+                    # t.start()
+                    #这一帧没有佩戴口罩
 
             cv2.rectangle(image, (xmin, ymin), (xmax, ymax), color, 2)
             cv2.putText(image, "%s: %.2f" % (id2class[class_id], conf), (xmin + 2, ymin - 2),
@@ -95,6 +104,7 @@ def inference(image,
     if show_result:
         Image.fromarray(image).show()
     return output_info
+    # return class_id
 
 
 def run_on_video(video_path, output_video_name, conf_thresh):
@@ -116,34 +126,61 @@ def run_on_video(video_path, output_video_name, conf_thresh):
         img_raw = cv2.cvtColor(img_raw, cv2.COLOR_BGR2RGB)
         read_frame_stamp = time.time()
         if (status):
-            inference(img_raw,
+            answer = inference(img_raw,
                       conf_thresh,
                       iou_thresh=0.5,
                       target_shape=(260, 260),
                       draw_result=True,
                       show_result=False)
+            if answer != []:
+                ans = answer[0]
             cv2.imshow('image', img_raw[:, :, ::-1])
             cv2.waitKey(1)
             inference_stamp = time.time()
             # writer.write(img_raw)
             write_frame_stamp = time.time()
             idx += 1
+            if idx % 40 == 0 :
+                if ans[0] != 0:
+                    print(ans,idx,"开始语音播报")
+                    t = MyThread(1, "thread:1", 1)
+                    t.start()
+            print("打印一行字")
             print("%d of %d" % (idx, total_frames))
             print("read_frame:%f, infer time:%f, write time:%f" % (read_frame_stamp - start_stamp,
                                                                    inference_stamp - read_frame_stamp,
-                                                                   write_frame_stamp - inference_stamp))
+                                                                  write_frame_stamp - inference_stamp))
             #检测到键盘输入q则退出
+            if cv2.waitKey(100) & 0xff == ord('q'):
+                break
     # writer.release()
+    cap.release()
+    cv2.destroyAllWindows()
+
+class MyThread(threading.Thread):
+    def __init__(self,threadID,name,counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):
+        # print(f"开启线程{self.name}")
+        threadLock.acquire()
+        print("正在加载语音")
+        notice('1')
+        print("语音加载完成")
+        threadLock.release()
 
 
-if __name__ == "__main__":
+
+def main():
+
     parser = argparse.ArgumentParser(description="Face Mask Detection")
     parser.add_argument('--img-mode', type=int, default=1, help='set 1 to run on image, 0 to run on video.')
     parser.add_argument('--img-path', type=str, help='path to your image.')
     parser.add_argument('--video-path', type=str, default='0', help='path to your video, `0` means to use camera.')
     # parser.add_argument('--hdf5', type=str, help='keras hdf5 file')
     args = parser.parse_args()
-
 
     if args.img_mode:
         ##################################################
@@ -152,6 +189,7 @@ if __name__ == "__main__":
         if not args.img_path:
             print("请输入图片的url:")
             args.img_path = input()
+
         def exp_imgcvt(img):
             "' :exception'"
             try:
@@ -162,12 +200,13 @@ if __name__ == "__main__":
                 imgPath = input()
                 img = cv2.imread(imgPath)
                 exp_imgcvt(img)
+
         ######################################################
         imgPath = args.img_path
         img = cv2.imread(imgPath)
         ####################################################
         #####niu
-        #exception
+        # exception
         img = exp_imgcvt(img)
         ########################################################
         inference(img, show_result=True, target_shape=(260, 260))
@@ -176,3 +215,15 @@ if __name__ == "__main__":
         if args.video_path == '0':
             video_path = 0
         run_on_video(video_path, '', conf_thresh=0.5)
+
+
+
+
+####################
+#增加线程锁
+#可以改为直接调用main函数
+##############
+if __name__ == '__main__':
+    threadLock = threading.Lock()
+    threads = []
+    main()

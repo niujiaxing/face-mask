@@ -77,7 +77,7 @@ python tensorflow_infer.py --img-mode 0 --video-path 0
 ### 需求
 
 - 搭建网站，在网站中使用模型
-- 调用api增加一些有意思的ai小工具
+- 调用api增加一些有意思的ai小工具，比如图像检测，或者语音对话之类的
 - 制作视频展示和ppt
 
 ### 目前存在问题
