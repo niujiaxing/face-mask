@@ -132,9 +132,23 @@ def run_on_video(video_path, output_video_name, conf_thresh):
                       target_shape=(260, 260),
                       draw_result=True,
                       show_result=False)
+            # define the content add in the picture
+            text = ''
+            color = (255, 0, 0)
             if answer != []:
                 ans = answer[0]
-            cv2.imshow('image', img_raw[:, :, ::-1])
+                # get the number of people in the picture
+                peopleNumber = len(answer)
+                if peopleNumber >= 3:
+                    # red color alert people number
+                    color = (255, 0, 0)
+                else:
+                    # safe color show people number
+                    color = (0, 255, 0)
+                text = '' + str(peopleNumber)
+            # modify the show_pic
+            img_raw_text = cv2.putText(img_raw, text, (50, 50), cv2.FONT_HERSHEY_COMPLEX, 2.0, color, 3)
+            cv2.imshow('image', img_raw_text[:, :, ::-1])
             cv2.waitKey(1)
             inference_stamp = time.time()
             # writer.write(img_raw)
@@ -142,14 +156,14 @@ def run_on_video(video_path, output_video_name, conf_thresh):
             idx += 1
             if idx % 40 == 0 :
                 if ans[0] != 0:
-                    print(ans,idx,"开始语音播报")
+                    print(ans,idx,"开始语音播报",peopleNumber)
                     t = MyThread(1, "thread:1", 1)
                     t.start()
-            print("打印一行字")
-            print("%d of %d" % (idx, total_frames))
-            print("read_frame:%f, infer time:%f, write time:%f" % (read_frame_stamp - start_stamp,
-                                                                   inference_stamp - read_frame_stamp,
-                                                                  write_frame_stamp - inference_stamp))
+            #print("打印一行字")
+            #print("%d of %d" % (idx, total_frames))
+            #print("read_frame:%f, infer time:%f, write time:%f" % (read_frame_stamp - start_stamp,
+            #                                                      inference_stamp - read_frame_stamp,
+            #                                                      write_frame_stamp - inference_stamp))
             #检测到键盘输入q则退出
             if cv2.waitKey(100) & 0xff == ord('q'):
                 break
