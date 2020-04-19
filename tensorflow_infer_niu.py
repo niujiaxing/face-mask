@@ -1,8 +1,6 @@
 #test more_thread
 import threading
-import time
 from utils import notice
-import os
 global score
 import cv2
 import time
@@ -21,7 +19,8 @@ sess, graph = load_tf_model('models/face_mask_detection.pb')
 feature_map_sizes = [[33, 33], [17, 17], [9, 9], [5, 5], [3, 3]]
 anchor_sizes = [[0.04, 0.056], [0.08, 0.11], [0.16, 0.22], [0.32, 0.45], [0.64, 0.72]]
 anchor_ratios = [[1, 0.62, 0.42]] * 5
-
+threadLock = threading.Lock()
+threads = []
 
 # generate anchors
 anchors = generate_anchors(feature_map_sizes, anchor_sizes, anchor_ratios)
@@ -159,11 +158,6 @@ def run_on_video(video_path, output_video_name, conf_thresh):
                     print(ans,idx,"开始语音播报",peopleNumber)
                     t = MyThread(1, "thread:1", 1)
                     t.start()
-            #print("打印一行字")
-            #print("%d of %d" % (idx, total_frames))
-            #print("read_frame:%f, infer time:%f, write time:%f" % (read_frame_stamp - start_stamp,
-            #                                                      inference_stamp - read_frame_stamp,
-            #                                                      write_frame_stamp - inference_stamp))
             #检测到键盘输入q则退出
             if cv2.waitKey(100) & 0xff == ord('q'):
                 break
@@ -187,22 +181,21 @@ class MyThread(threading.Thread):
 
 
 
-def main():
+def main(img_mode,img_path,video_path):
 
-    parser = argparse.ArgumentParser(description="Face Mask Detection")
-    parser.add_argument('--img-mode', type=int, default=1, help='set 1 to run on image, 0 to run on video.')
-    parser.add_argument('--img-path', type=str, help='path to your image.')
-    parser.add_argument('--video-path', type=str, default='0', help='path to your video, `0` means to use camera.')
-    # parser.add_argument('--hdf5', type=str, help='keras hdf5 file')
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser(description="Face Mask Detection")
+    # img-mode, type=int,set 1 to run on image, 0 to run on video.
+    # img-path', type=str, help='path to your image
+    # video-path', type=str|int, path to your video, `0` means to use camera.
 
-    if args.img_mode:
+
+    if img_mode:
         ##################################################
         # update
         # niu
-        if not args.img_path:
+        if not img_path:
             print("请输入图片的url:")
-            args.img_path = input()
+            img_path = input()
 
         def exp_imgcvt(img):
             "' :exception'"
@@ -216,7 +209,7 @@ def main():
                 exp_imgcvt(img)
 
         ######################################################
-        imgPath = args.img_path
+        imgPath = img_path
         img = cv2.imread(imgPath)
         ####################################################
         #####niu
@@ -225,10 +218,15 @@ def main():
         ########################################################
         inference(img, show_result=True, target_shape=(260, 260))
     else:
-        video_path = args.video_path
-        if args.video_path == '0':
-            video_path = 0
-        run_on_video(video_path, '', conf_thresh=0.5)
+        def exp_viocvt(video_path):
+            "' :exception'"
+            try:
+                run_on_video(video_path, '', conf_thresh=0.5)
+            except Exception:
+                print("请输入正确的视频path")
+                video_path = input()
+                exp_viocvt(video_path)
+        exp_viocvt(video_path)
 
 
 
@@ -238,6 +236,9 @@ def main():
 #可以改为直接调用main函数
 ##############
 if __name__ == '__main__':
-    threadLock = threading.Lock()
-    threads = []
-    main()
+    # img-mode, type=int,set 1 to run on image, 0 to run on video.
+    # img-path', type=str, help='path to your image
+    # video-path', type=str|int, path to your video, `0` means to use camera.
+    main(1,'img/demo2.jpg',0)
+    # main(img_mode=0, img_path=None,video_path=0)
+    # main(img_mode=0, img_path=None, video_path='img/video.mp4')

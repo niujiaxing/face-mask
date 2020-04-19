@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow_infer_niu.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow_infer_niu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +214,7 @@
       <workItem from="1586949461080" duration="2499000" />
       <workItem from="1587010184888" duration="20592000" />
       <workItem from="1587178636628" duration="2563000" />
+      <workItem from="1587266560023" duration="446000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586939350505</created>
@@ -257,22 +258,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587109479667" />
-    <state width="1323" height="136" key="GridCell.Tab.0.bottom" timestamp="1587182194454">
+    <state width="1323" height="231" key="GridCell.Tab.0.bottom" timestamp="1587267115781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
-    <state width="1323" height="136" key="GridCell.Tab.0.center" timestamp="1587182194454">
+    <state width="1323" height="231" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587267115781" />
+    <state width="1323" height="231" key="GridCell.Tab.0.center" timestamp="1587267115780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
-    <state width="1323" height="136" key="GridCell.Tab.0.left" timestamp="1587182194454">
+    <state width="1323" height="231" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587267115780" />
+    <state width="1323" height="231" key="GridCell.Tab.0.left" timestamp="1587267115780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
-    <state width="1323" height="136" key="GridCell.Tab.0.right" timestamp="1587182194454">
+    <state width="1323" height="231" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587267115780" />
+    <state width="1323" height="231" key="GridCell.Tab.0.right" timestamp="1587267115781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587182194454" />
+    <state width="1323" height="231" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587267115781" />
     <state width="1323" height="175" key="GridCell.Tab.1.bottom" timestamp="1587115764423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -300,9 +301,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Face_Mask2_0$notice.coverage" NAME="notice Coverage Results" MODIFIED="1587108490730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer_niu.coverage" NAME="tensorflow_infer_niu Coverage Results" MODIFIED="1587118336149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer_niu.coverage" NAME="tensorflow_infer_niu Coverage Results" MODIFIED="1587267028954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer__1_.coverage" NAME="tensorflow_infer (1) Coverage Results" MODIFIED="1587023343101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1587180339922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1587267115759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$pytest_in_test_notice_py.coverage" NAME="pytest in test_notice.py Coverage Results" MODIFIED="1587109250993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$test_notice.coverage" NAME="test_notice Coverage Results" MODIFIED="1587111259188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/FaceMask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586934944230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
