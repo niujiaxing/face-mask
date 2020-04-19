@@ -1,8 +1,9 @@
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template, jsonify, request, make_response, send_from_directory, abort
-import time
 import os
 import base64
+from tensorflow_infer_niu import main
+
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'upload'
@@ -33,14 +34,18 @@ def api_upload():
         fname = "img\\img." + ext
         f.save(fname)
         if ext in IMAGE:
-            os.system("python tensorflow_infer.py --img-path " + fname)  # ['p1.py']
+            main(1, fname, 0)  # ['p1.py']
         else:
-            os.system("python tensorflow_infer.py --img-mode 0 --video-path " + fname)
+            main(0, 0, fname)
         return render_template("upload.html")
     else:
-
         return render_template("upload.html", msg="上传失败！")
 
+
+@app.route('/camera')
+def camera():
+    main(0, 0, 0)
+    return render_template("upload.html")
 
 if __name__ == '__main__':
         app.run()

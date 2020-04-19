@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
     <body>
+    <center>
+      <h3>{{msg}}</h3>
+    </center>
+
     上传文件<br>
         <div>
             <form method="post" action="up_photo" enctype="multipart/form-data">
@@ -13,7 +17,12 @@
             <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
             </form>
         </div>
-    {{msg}}
+
+<a href="camera">
+    <button>打开摄像头</button>
+</a>
+
+
 
 
     </body>
