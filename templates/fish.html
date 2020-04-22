@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <div>
+        <h2>鱼类识别</h2>
+        上传图片<br>
+            <div>
+                <form method="post" action="up_fish" enctype="multipart/form-data">
+                <input type="file" size="30" name="photo"/>
+                <br>
+                <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
+                </form>
+            </div>
+    </div>
+          <h3>{{ fishname }}</h3>
+</center>
+</body>
+</html>

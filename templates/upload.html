@@ -6,24 +6,21 @@
 </head>
     <body>
     <center>
-      <h3>{{msg}}</h3>
-    </center>
-
-    上传文件<br>
+        <h3>{{msg}}</h3>
         <div>
-            <form method="post" action="up_photo" enctype="multipart/form-data">
-            <input type="file" size="30" name="photo"/>
-            <br>
-            <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
-            </form>
+            <h2>口罩佩戴检测</h2>
+            上传文件<br>
+                <div>
+                    <form method="post" action="up_photo" enctype="multipart/form-data">
+                    <input type="file" size="30" name="photo"/>
+                    <br>
+                    <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
+                    </form>
+                </div>
+                <a href="camera">
+                <button>打开摄像头</button>
+            </a>
         </div>
-
-<a href="camera">
-    <button>打开摄像头</button>
-</a>
-
-
-
-
+    </center>
     </body>
 </html>
