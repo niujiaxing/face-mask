@@ -74,8 +74,10 @@ def distinguish_fish():
         ext = fname.rsplit('.', 1)[1]
         fname = "img\\fish." + ext
         f.save(fname)
-        fish = get_fish(fname)
-        return render_template("fish.html", fishname=fish)
+        info = get_fish(fname).split(" ")
+        msg = "识别结果：" + info[0] + " 准确率：" + info[1]
+
+        return render_template("fish.html", msg=msg)
     else:
         return render_template("fish.html", msg="上传失败,请检查数据格式是否正确！")
 
