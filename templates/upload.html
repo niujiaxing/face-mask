@@ -1,44 +1,11 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-    <body>
-    <center>
-        <h3>{{msg}}</h3>
-        <div>
-            <h2>口罩佩戴检测</h2>
-            上传文件<br>
-                <div>
-                    <form method="post" action="up_photo" enctype="multipart/form-data">
-                    <input type="file" size="30" name="photo"/>
-                    <br>
-                    <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
-                    </form>
-                </div>
-                <a href="camera">
-                <button>打开摄像头</button>
-            </a>
-        </div>
-    </center>
-    </body>
-</html>
-=======
 <!DOCTYPE html >
-<!--
-Name       : upload
-Released   : 20200423
-
--->
 <html >
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>某支队伍的upload网页</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 <!-- start header -->
@@ -63,8 +30,8 @@ Released   : 20200423
 <div id="page">
 	<div id="menu">
 		<ul>
-			<li><a href="#">首页</a></li>
-			<li class="current_page_item"><a href="#">口罩佩戴检测</a></li>
+			<li><a href="/">首页</a></li>
+			<li class="current_page_item"><a href="{{ url_for('upload') }}">口罩佩戴检测</a></li>
 			<li><a href="#">疫情地图</a></li>
 			<li><a href="#">海外疫情</a></li>
 			<li><a href="#">其他</a></li>
