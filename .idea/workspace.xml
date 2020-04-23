@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/images/img01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img05.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img06.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img07.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/img08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fish.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fish.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/distinguish_lajiclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/distinguish_lajiclass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,13 +40,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python_work\project\newpro\Face_Mask2.0\templates\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python_work\project\newpro\Face_Mask2.0\templates" />
       <recent name="D:\python_work\project\newpro\Face_Mask2.0\img" />
       <recent name="D:\python_work\project\newpro\Face_Mask2.0" />
       <recent name="D:\python_work\project\newpro\Face_Mask2.0\Runmodle" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.distinguish_lajiclass">
     <configuration name="fish.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Face_Mask2.0/templates/fish.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -142,11 +136,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.distinguish_lajiclass" />
         <item itemvalue="Python.app" />
         <item itemvalue="JavaScript Debug.fish.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.upload.html" />
-        <item itemvalue="Python.distinguish_lajiclass" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +165,7 @@
       <workItem from="1587266560023" duration="446000" />
       <workItem from="1587372472665" duration="970000" />
       <workItem from="1587392172711" duration="5778000" />
-      <workItem from="1587612188362" duration="9019000" />
+      <workItem from="1587612188362" duration="9888000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586939350505</created>
@@ -215,22 +209,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587109479667" />
-    <state width="1323" height="105" key="GridCell.Tab.0.bottom" timestamp="1587650596351">
+    <state width="1323" height="170" key="GridCell.Tab.0.bottom" timestamp="1587651414283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="105" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
-    <state width="1323" height="105" key="GridCell.Tab.0.center" timestamp="1587650596351">
+    <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587651414283" />
+    <state width="1323" height="170" key="GridCell.Tab.0.center" timestamp="1587651414282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="105" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
-    <state width="1323" height="105" key="GridCell.Tab.0.left" timestamp="1587650596351">
+    <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587651414282" />
+    <state width="1323" height="170" key="GridCell.Tab.0.left" timestamp="1587651414282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="105" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
-    <state width="1323" height="105" key="GridCell.Tab.0.right" timestamp="1587650596351">
+    <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587651414282" />
+    <state width="1323" height="170" key="GridCell.Tab.0.right" timestamp="1587651414282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="105" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
+    <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587651414282" />
     <state width="1306" height="172" key="GridCell.Tab.1.bottom" timestamp="1587477574912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -265,7 +259,7 @@
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer_niu.coverage" NAME="tensorflow_infer_niu Coverage Results" MODIFIED="1587267028954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer__1_.coverage" NAME="tensorflow_infer (1) Coverage Results" MODIFIED="1587023343101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1587267115759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Face_Mask2_0$distinguish_lajiclass.coverage" NAME="distinguish_lajiclass Coverage Results" MODIFIED="1587612675669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$distinguish_lajiclass.coverage" NAME="distinguish_lajiclass Coverage Results" MODIFIED="1587651193873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$distinguish_fish.coverage" NAME="distinguish_fish Coverage Results" MODIFIED="1587477221664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$pytest_in_test_notice_py.coverage" NAME="pytest in test_notice.py Coverage Results" MODIFIED="1587109250993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$test_notice.coverage" NAME="test_notice Coverage Results" MODIFIED="1587111259188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
