@@ -32,17 +32,19 @@ def get_laji(filename):
     :return: lajiname+predict_number
     '''
     AccessToken = '24.aeebbb75095c7af0b14b49ff10a267c7.2592000.1590122115.282335-19547903'#这里填写自己的access_token
-    # lajiname = 'D:\project\Face_Mask2.0\img\apple'#填写图片路径
-    url = ' https://aip.baidubce.com/rpc/2.0/ai_custom/v1/classification/laji_class' + '?access_token='+ AccessToken
+    url = 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/classification/laji_class' + '?access_token='+ AccessToken
     # 请求头
     headers = {'Content-Type' : 'application/json'}
 
     #打开图片文件
+    print(filename)
     str_res = ""
     with open(filename , 'rb') as file:
         pic = base64.b64encode(file.read()).decode()
+        print(pic)
     data = {'image':pic,"top_num": 5}
     request = requests.post(url,headers= headers, data=json.dumps(data))
+    print(request)
     dict_res = json.loads(request.content)
     print(dict_res)
     for key,result in dict_res.items():
@@ -55,7 +57,7 @@ def get_laji(filename):
     return str_res
 
 if __name__ == '__main__':
-    img = 'D:\project\Face_Mask2.0\img\\apple'
+    img = 'D:\python_work\project\\newpro\Face_Mask2.0\img\\apple.jpg'
     result = get_laji(img)
 
     ###终端返回

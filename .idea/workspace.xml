@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6aa686-ca4c-477d-a7fd-d3c4cf98ddea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/goldfish.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/shark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/distinguish_fish.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img05.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img06.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img07.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/img08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fish.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/distinguish_lajiclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/distinguish_lajiclass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils/test_notice.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/images" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -48,8 +56,39 @@
       <recent name="D:\python_work\project\newpro\Face_Mask2.0\Runmodle" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.distinguish_fish">
-    <configuration name="distinguish_fish" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="fish.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Face_Mask2.0/templates/fish.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Face_Mask2.0/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="upload.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Face_Mask2.0/templates/upload.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FaceMask2.0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="distinguish_lajiclass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FaceMask2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,95 +101,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/distinguish_fish.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main_tensorflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FaceMask2.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_tensorflow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="notice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FaceMask2.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/notice.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tensorflow_infer (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FaceMask2.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensorflow_infer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tensorflow_infer_niu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FaceMask2.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensorflow_infer_niu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/distinguish_lajiclass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,19 +134,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_notice" />
-      <item itemvalue="Python.main_tensorflow" />
-      <item itemvalue="Python.notice" />
-      <item itemvalue="Python.tensorflow_infer (1)" />
-      <item itemvalue="Python.tensorflow_infer_niu" />
-      <item itemvalue="Python.distinguish_fish" />
+      <item itemvalue="Python.distinguish_lajiclass" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="JavaScript Debug.upload.html" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.fish.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.distinguish_fish" />
-        <item itemvalue="Python.main_tensorflow" />
-        <item itemvalue="Python.tensorflow_infer_niu" />
-        <item itemvalue="Python.notice" />
-        <item itemvalue="Python.tensorflow_infer (1)" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="JavaScript Debug.fish.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.upload.html" />
+        <item itemvalue="Python.distinguish_lajiclass" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +170,8 @@
       <workItem from="1587178636628" duration="2563000" />
       <workItem from="1587266560023" duration="446000" />
       <workItem from="1587372472665" duration="970000" />
-      <workItem from="1587392172711" duration="5579000" />
+      <workItem from="1587392172711" duration="5778000" />
+      <workItem from="1587612188362" duration="9019000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586939350505</created>
@@ -263,38 +215,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587109479667" />
-    <state width="1306" height="172" key="GridCell.Tab.0.bottom" timestamp="1587477268966">
+    <state width="1323" height="105" key="GridCell.Tab.0.bottom" timestamp="1587650596351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587477268966" />
-    <state width="1306" height="172" key="GridCell.Tab.0.center" timestamp="1587477268966">
+    <state width="1323" height="105" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
+    <state width="1323" height="105" key="GridCell.Tab.0.center" timestamp="1587650596351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587477268966" />
-    <state width="1306" height="172" key="GridCell.Tab.0.left" timestamp="1587477268965">
+    <state width="1323" height="105" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
+    <state width="1323" height="105" key="GridCell.Tab.0.left" timestamp="1587650596351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587477268965" />
-    <state width="1306" height="172" key="GridCell.Tab.0.right" timestamp="1587477268966">
+    <state width="1323" height="105" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
+    <state width="1323" height="105" key="GridCell.Tab.0.right" timestamp="1587650596351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587477268966" />
-    <state width="1306" height="172" key="GridCell.Tab.1.bottom" timestamp="1587477228550">
+    <state width="1323" height="105" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587650596351" />
+    <state width="1306" height="172" key="GridCell.Tab.1.bottom" timestamp="1587477574912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587477228550" />
-    <state width="1306" height="172" key="GridCell.Tab.1.center" timestamp="1587477228549">
+    <state width="1306" height="172" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587477574912" />
+    <state width="1306" height="172" key="GridCell.Tab.1.center" timestamp="1587477574911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587477228549" />
-    <state width="1306" height="172" key="GridCell.Tab.1.left" timestamp="1587477228549">
+    <state width="1306" height="172" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587477574911" />
+    <state width="1306" height="172" key="GridCell.Tab.1.left" timestamp="1587477574911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587477228549" />
-    <state width="1306" height="172" key="GridCell.Tab.1.right" timestamp="1587477228550">
+    <state width="1306" height="172" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587477574911" />
+    <state width="1306" height="172" key="GridCell.Tab.1.right" timestamp="1587477574912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="172" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587477228550" />
+    <state width="1306" height="172" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587477574912" />
     <state x="184" y="5" key="SettingsEditor" timestamp="1586954890902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -303,16 +255,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="475" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586939297819" />
+    <state x="756" y="353" width="1088" height="615" key="dock-window-1" timestamp="1587649299169">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="756" y="353" width="1088" height="615" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1587649299169" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Face_Mask2_0$notice.coverage" NAME="notice Coverage Results" MODIFIED="1587108490730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer_niu.coverage" NAME="tensorflow_infer_niu Coverage Results" MODIFIED="1587267028954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer__1_.coverage" NAME="tensorflow_infer (1) Coverage Results" MODIFIED="1587023343101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1587267115759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$distinguish_lajiclass.coverage" NAME="distinguish_lajiclass Coverage Results" MODIFIED="1587612675669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$distinguish_fish.coverage" NAME="distinguish_fish Coverage Results" MODIFIED="1587477221664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$pytest_in_test_notice_py.coverage" NAME="pytest in test_notice.py Coverage Results" MODIFIED="1587109250993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$test_notice.coverage" NAME="test_notice Coverage Results" MODIFIED="1587111259188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/FaceMask2_0$main_tensorflow.coverage" NAME="main_tensorflow Coverage Results" MODIFIED="1586934944230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Face_Mask2_0$tensorflow_infer.coverage" NAME="tensorflow_infer Coverage Results" MODIFIED="1586938959436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Runmodle" />
+    <SUITE FILE_PATH="coverage/Face_Mask2_0$app.coverage" NAME="app Coverage Results" MODIFIED="1587650596332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
