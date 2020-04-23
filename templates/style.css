@@ -16,7 +16,11 @@ body {
 
 body, th, td, input, textarea {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
 	font-size: 12px;
+=======
+	font-size: 15px;
+>>>>>>> aa2f4e5... upload
 	color: #666666;
 }
 
@@ -189,7 +193,11 @@ hr {
 	width: 785px;
 	margin: 0 auto;
 	padding-left: 15px;
+<<<<<<< HEAD
 	background: #FFFFFF url(images/img08.jpg) no-repeat top left;
+=======
+	background: #FFFFFF url(images/img08.jpeg) no-repeat top left;
+>>>>>>> aa2f4e5... upload
 	height: 327px;
 	border-top: 1px solid #D5D5D5;
 	border-left: 1px solid #D5D5D5;
@@ -265,10 +273,17 @@ hr {
 
 .post .meta {
 	margin: 0;
+<<<<<<< HEAD
 	padding: 5px 0px 0px 15px;
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
+=======
+	padding: 8px 0px 0px 15px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+>>>>>>> aa2f4e5... upload
 	color: #CFCFCF;
 }
 
