@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>人脸口罩检测 </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="screen" />-->
+<link rel = "stylesheet" href="{{url_for('static',filename = 'css/style.css')}}" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="search">
+		<form id="searchform" method="get" action="#">
+			<fieldset>
+			<input id="s" type="text" name="s" value="" class="text" />
+			<input id="x" type="submit" value="Search" class="button" />
+			</fieldset>
+		</form>
+	</div>
+</div>
+<div id="logo">
+	<h1><a href="#">人脸口罩检测</a></h1>
+	<h2>来自某支队伍</h2>
+	</div>
+<!-- end header -->
+<hr />
+<!-- start page -->
+<div id="page">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#">首页</a></li>
+			<li><a href="#">口罩佩戴检测</a></li>
+			<li><a href="#">疫情地图</a></li>
+			<li><a href="#">海外疫情</a></li>
+			<li><a href="#">其他</a></li>
+		</ul>
+	</div>
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title"><a href="#">你是什么垃圾</a></h1>
+			<p class="meta"><small>垃圾分类，可以识别干垃圾，湿垃圾，有害垃圾等，识别率高达百分之87</small></p>
+			<div class="entry">
+				<p><strong>在此处上传图片</strong> </p>
+				<p><div>
+                <form method="post" action="up_fish" enctype="multipart/form-data">
+                <input type="file" size="30" name="photo"/>
+                <br>
+                <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
+                </form>
+            	</div>
+				</p>
+				<p><h3>{{ msg }}</h3></p>
+				<p></p>
+				<blockquote>
+					<p></p>
+				</blockquote>
+			</div>
+			<p class="links"></p>
+			<p class="tags"></p>
+		</div>
+	</div>
+	<div id="sidebar2" class="sidebar">
+		<ul>
+			<li>
+				<h2>可能感兴趣的一些信息</h2>
+				<ul>
+					<li><a href="#">垃圾分类落实政策</a></li>
+					<li><a href="#">干垃圾和湿垃圾</a></li>
+					<li><a href="#">有害垃圾处理</a></li>
+				</ul>
+
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar two -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<hr />
+<!-- start footer -->
+<div id="footer">
+	<p>&copy;2020 欢迎联系我们 137214788@qq.com. &nbsp;&bull;&nbsp; Designed by 某支队伍.</p>
+</div>
+<!-- end footer -->
+</body>
+</html>
