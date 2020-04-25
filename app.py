@@ -4,6 +4,7 @@ import os
 import base64
 from tensorflow_infer_niu import main
 from utils.distinguish_fish import get_fish
+from utils.distinguish_lajiclass import get_laji
 
 
 
@@ -36,6 +37,11 @@ def upload():
 @app.route("/fish")
 def fish():
     return render_template("fish.html")
+
+
+@app.route('/garbage')
+def garbage():
+    return render_template("garbage.html")
 
 
 # 上传图片
@@ -82,6 +88,21 @@ def distinguish_fish():
         return render_template("fish.html", msg="上传失败,请检查数据格式是否正确！")
 
 
+@app.route('/up_garbage', methods=['POST'])
+def sort_waste():
+    f = request.files['photo']
+    if f and allowed_img_file(f.filename):
+        fname = secure_filename(f.filename)
+        ext = fname.rsplit('.', 1)[1]
+        fname = "img\\garbage." + ext
+        f.save(fname)
+        info = get_laji(fname)
+        print(info)
+        # msg = "识别结果：" + info[0] + " 准确率：" + info[1]
+
+        return render_template("fish.html")
+    else:
+        return render_template("fish.html", msg="上传失败,请检查数据格式是否正确！")
 
 
 

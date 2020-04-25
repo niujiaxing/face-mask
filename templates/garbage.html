@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>人脸口罩检测 </title>
+<title>垃圾分类 </title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <!--<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="screen" />-->
-<link rel = "stylesheet" href="{{url_for('static',filename = 'css/style.css')}}" />
+<link rel = "stylesheet" href="{{url_for('static',filename = 'style.css')}}" />
 </head>
 <body>
 <!-- start header -->
@@ -30,11 +30,12 @@
 <div id="page">
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="#">首页</a></li>
-			<li><a href="#">口罩佩戴检测</a></li>
+			<li class="current_page_item"><a href="/">首页</a></li>
+			<li><a href="{{ url_for('upload') }}">口罩佩戴检测</a></li>
 			<li><a href="#">疫情地图</a></li>
 			<li><a href="#">海外疫情</a></li>
-			<li><a href="#">其他</a></li>
+			<li><a href="{{ url_for('fish') }}">鱼类识别</a></li>
+			<li><a href="{{ url_for('garbage') }}">垃圾分类</a></li>
 		</ul>
 	</div>
 	<!-- start content -->
@@ -45,7 +46,7 @@
 			<div class="entry">
 				<p><strong>在此处上传图片</strong> </p>
 				<p><div>
-                <form method="post" action="up_fish" enctype="multipart/form-data">
+                <form method="post" action="up_garbage" enctype="multipart/form-data">
                 <input type="file" size="30" name="photo"/>
                 <br>
                 <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
