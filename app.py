@@ -81,7 +81,7 @@ def distinguish_fish():
         fname = "img\\fish." + ext
         f.save(fname)
         info = get_fish(fname).split(" ")
-        msg = "识别结果：" + info[0] + " 准确率：" + info[1]
+        msg = "识别结果：" + info[0] + "   准确率：" + info[1]
 
         return render_template("fish.html", msg=msg)
     else:
@@ -96,14 +96,11 @@ def sort_waste():
         ext = fname.rsplit('.', 1)[1]
         fname = "img\\garbage." + ext
         f.save(fname)
-        info = get_laji(fname)
-        print(info)
-        # msg = "识别结果：" + info[0] + " 准确率：" + info[1]
-
-        return render_template("fish.html")
+        info = get_laji(fname).split(" ")
+        msg = "识别结果：" + info[0] + "   准确率：" + info[1]
+        return render_template("garbage.html", msg=msg)
     else:
-        return render_template("fish.html", msg="上传失败,请检查数据格式是否正确！")
-
+        return render_template("garbage.html", msg="上传失败,请检查数据格式是否正确！")
 
 
 if __name__ == '__main__':
