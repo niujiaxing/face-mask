@@ -30,11 +30,12 @@
 <div id="page">
 	<div id="menu">
 		<ul>
-			<li><a href="/">首页</a></li>
-			<li class="current_page_item"><a href="{{ url_for('upload') }}">口罩佩戴检测</a></li>
+			<li class="current_page_item"><a href="/">首页</a></li>
+			<li><a href="{{ url_for('upload') }}">口罩佩戴检测</a></li>
 			<li><a href="#">疫情地图</a></li>
 			<li><a href="#">海外疫情</a></li>
-			<li><a href="#">其他</a></li>
+			<li><a href="{{ url_for('fish') }}">鱼类识别</a></li>
+			<li><a href="{{ url_for('garbage') }}">垃圾分类</a></li>
 		</ul>
 	</div>
 	<!-- start content -->
@@ -52,11 +53,11 @@
                     </form>
                   </div>
                   <br />
-                <a href="camera">
+                <a href="/camera">
                 &nbsp;&nbsp;&nbsp;<button><font size="3">打开摄像头</font></button>
             </a>
        
-			
+
 			
 			
 		</div>
@@ -91,4 +92,3 @@
 <!-- end footer -->
 </body>
 </html>
->>>>>>> aa2f4e5... upload
