@@ -8,6 +8,9 @@ pipeline {
       }
     }
     stage('打包镜像') {
+      input {
+        message '是否继续执行构建'
+      }
       steps {
         sh "docker build -t ${ARTIFACT_IMAGE}:${env.GIT_BUILD_REF} ."
         sh "docker tag ${ARTIFACT_IMAGE}:${env.GIT_BUILD_REF} ${ARTIFACT_IMAGE}:latest"
