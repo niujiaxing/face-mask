@@ -58,10 +58,13 @@ def api_upload():
         fname = "img\\img." + ext
         f.save(fname)
         if ext in IMAGE:
-            main(1, fname, 0)  # ['p1.py']
+            img_name = main(1, fname, 0)  # ['p1.py']
+            image_data = open('img\\'+img_name, "rb").read()
+            response = make_response(image_data)
+            response.headers['Content-Type'] = 'image/png'
+            return response
         else:
             main(0, 0, fname)
-        return render_template("upload.html")
     else:
         return render_template("upload.html", msg="上传失败,请检查数据格式是否正确！")
 

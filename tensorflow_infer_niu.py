@@ -14,6 +14,7 @@ from utils.anchor_decode import decode_bbox
 from utils.nms import single_class_non_max_suppression
 from load_model.tensorflow_loader import load_tf_model, tf_inference
 from utils.notice import notice
+
 sess, graph = load_tf_model('models/face_mask_detection.pb')
 # anchor configuration
 feature_map_sizes = [[33, 33], [17, 17], [9, 9], [5, 5], [3, 3]]
@@ -29,6 +30,8 @@ anchors = generate_anchors(feature_map_sizes, anchor_sizes, anchor_ratios)
 # so we expand dim for anchors to [1, anchor_num, 4]
 anchors_exp = np.expand_dims(anchors, axis=0)
 id2class = {0: 'Mask', 1: 'NoMask'}
+
+
 
 def inference(image,
               conf_thresh=0.5,
@@ -99,10 +102,13 @@ def inference(image,
             cv2.putText(image, "%s: %.2f" % (id2class[class_id], conf), (xmin + 2, ymin - 2),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, color)
         output_info.append([class_id, conf, xmin, ymin, xmax, ymax])
+    timestamp = get_13_timestamp()
+    filename = timestamp+".BMP"
+    Image.fromarray(image).save('img\\'+filename)
+        # Image.fromarray(image).show()
 
-    if show_result:
-        Image.fromarray(image).show()
-    return output_info
+    return filename
+    # return output_info
     # return class_id
 
 
@@ -216,7 +222,7 @@ def main(img_mode,img_path,video_path):
         # exception
         img = exp_imgcvt(img)
         ########################################################
-        inference(img, show_result=True, target_shape=(260, 260))
+        return inference(img, show_result=True, target_shape=(260, 260))
     else:
         def exp_viocvt(video_path):
             "' :exception'"
@@ -229,16 +235,24 @@ def main(img_mode,img_path,video_path):
         exp_viocvt(video_path)
 
 
+def get_13_timestamp():
+    # 函数功能：获取当前时间的时间戳（13位）
+    # 13位时间戳的获取方式跟10位时间戳获取方式一样
+    # 两者之间的区别在于10位时间戳是秒级，13位时间戳是毫秒级
+    timestamp = time.time()
+    return str(int(round(timestamp) * 1000))
 
 
 ####################
 #增加线程锁
 #可以改为直接调用main函数
 ##############
-if __name__ == '__main__':
-    # img-mode, type=int,set 1 to run on image, 0 to run on video.
-    # img-path', type=str, help='path to your image
-    # video-path', type=str|int, path to your video, `0` means to use camera.
-    main(1,'img/demo2.jpg',0)
-    # main(img_mode=0, img_path=None,video_path=0)
-    # main(img_mode=0, img_path=None, video_path='img/video.mp4')
+
+
+# if __name__ == '__main__':
+#     # img-mode, type=int,set 1 to run on image, 0 to run on video.
+#     # img-path', type=str, help='path to your image
+#     # video-path', type=str|int, path to your video, `0` means to use camera.
+#      main(1,'img/demo2.jpg',0)
+#     # main(img_mode=0, img_path=None,video_path=0)
+#     # main(img_mode=0, img_path=None, video_path='img/video.mp4')
