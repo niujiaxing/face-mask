@@ -103,11 +103,11 @@ def inference(image,
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, color)
         output_info.append([class_id, conf, xmin, ymin, xmax, ymax])
     timestamp = get_13_timestamp()
-    filename = timestamp+".BMP"
-    Image.fromarray(image).save('img\\'+filename)
+    filename = timestamp + ".png"
+    Image.fromarray(image).save('user_data\\'+filename)
         # Image.fromarray(image).show()
 
-    return filename
+    return filename, output_info
     # return output_info
     # return class_id
 
@@ -118,7 +118,7 @@ def run_on_video(video_path, output_video_name, conf_thresh):
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     fps = cap.get(cv2.CAP_PROP_FPS)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    # writer = cv2.VideoWriter(output_video_name, fourcc, int(fps), (int(width), int(height)))
+    writer = cv2.VideoWriter(output_video_name, fourcc, int(fps), (int(width), int(height)))
     total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     if not cap.isOpened():
         raise ValueError("Video open failed.")
@@ -128,10 +128,10 @@ def run_on_video(video_path, output_video_name, conf_thresh):
     while status:
         start_stamp = time.time()
         status, img_raw = cap.read()
-        img_raw = cv2.cvtColor(img_raw, cv2.COLOR_BGR2RGB)
-        read_frame_stamp = time.time()
         if (status):
-            answer = inference(img_raw,
+            img_raw = cv2.cvtColor(img_raw, cv2.COLOR_BGR2RGB)
+            read_frame_stamp = time.time()
+            img_path, answer = inference(img_raw,
                       conf_thresh,
                       iou_thresh=0.5,
                       target_shape=(260, 260),
@@ -154,9 +154,11 @@ def run_on_video(video_path, output_video_name, conf_thresh):
             # modify the show_pic
             img_raw_text = cv2.putText(img_raw, text, (50, 50), cv2.FONT_HERSHEY_COMPLEX, 2.0, color, 3)
             cv2.imshow('image', img_raw_text[:, :, ::-1])
+            ######################
             cv2.waitKey(1)
             inference_stamp = time.time()
-            # writer.write(img_raw)
+            # img = cv2.imread(img_path)
+            writer.write(img_raw_text[:, :, ::-1])
             write_frame_stamp = time.time()
             idx += 1
             if idx % 40 == 0 :
@@ -167,9 +169,10 @@ def run_on_video(video_path, output_video_name, conf_thresh):
             #检测到键盘输入q则退出
             if cv2.waitKey(100) & 0xff == ord('q'):
                 break
-    # writer.release()
+    writer.release()
     cap.release()
     cv2.destroyAllWindows()
+
 
 class MyThread(threading.Thread):
     def __init__(self,threadID,name,counter):
@@ -227,12 +230,16 @@ def main(img_mode,img_path,video_path):
         def exp_viocvt(video_path):
             "' :exception'"
             try:
-                run_on_video(video_path, '', conf_thresh=0.5)
+                out_video_path = "user_data\\video" + get_13_timestamp() + ".mp4"
+                # out_video_path = "img01.mp4"
+                print(out_video_path)
+                run_on_video(video_path, out_video_path, conf_thresh=0.5)
+                return out_video_path
             except Exception:
                 print("请输入正确的视频path")
                 video_path = input()
                 exp_viocvt(video_path)
-        exp_viocvt(video_path)
+        return exp_viocvt(video_path)
 
 
 def get_13_timestamp():
