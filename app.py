@@ -6,7 +6,7 @@ from tensorflow_infer_niu import main
 from utils.distinguish_fish import get_fish
 from utils.distinguish_lajiclass import get_laji
 from utils.camera import VideoCamera
-from tensorflow_infer_niu import get_13_timestamp
+
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'upload'
@@ -55,21 +55,13 @@ def api_upload():
     if f and allowed_file(f.filename):
         fname = secure_filename(f.filename)
         ext = fname.rsplit('.', 1)[1]
-        timestamp = get_13_timestamp()
-        fname = "user_data\\" + timestamp + "." + ext
+        fname = "img\\img." + ext
         f.save(fname)
         if ext in IMAGE:
-            img_name, out = main(1, fname, 0)  # ['p1.py']
-            image_data = open('user_data\\'+img_name, "rb").read()
-            response = make_response(image_data)
-            response.headers['Content-Type'] = 'image/png'
-            return response
+            main(1, fname, 0)  # ['p1.py']
         else:
-            video_path = main(0, 0, fname)
-            video_data = open(video_path, "rb").read()
-            response = make_response(video_data)
-            response.headers['Content-Type'] = 'video/mp4'
-            return response
+            main(0, 0, fname)
+        return render_template("upload.html")
     else:
         return render_template("upload.html", msg="上传失败,请检查数据格式是否正确！")
 

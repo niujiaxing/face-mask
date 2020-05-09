@@ -14,7 +14,6 @@ from utils.anchor_decode import decode_bbox
 from utils.nms import single_class_non_max_suppression
 from load_model.tensorflow_loader import load_tf_model, tf_inference
 from utils.notice import notice
-
 sess, graph = load_tf_model('models/face_mask_detection.pb')
 # anchor configuration
 feature_map_sizes = [[33, 33], [17, 17], [9, 9], [5, 5], [3, 3]]
@@ -30,8 +29,6 @@ anchors = generate_anchors(feature_map_sizes, anchor_sizes, anchor_ratios)
 # so we expand dim for anchors to [1, anchor_num, 4]
 anchors_exp = np.expand_dims(anchors, axis=0)
 id2class = {0: 'Mask', 1: 'NoMask'}
-
-
 
 def inference(image,
               conf_thresh=0.5,
@@ -91,24 +88,16 @@ def inference(image,
                 color = (0, 255, 0)
             else:
                 color = (255, 0, 0)
-                # print(times)
-                # if times % 20 == 0:
-                    ###################
-                    # t = MyThread(1, "thread:1", 1)
-                    # t.start()
-                    #这一帧没有佩戴口罩
+
 
             cv2.rectangle(image, (xmin, ymin), (xmax, ymax), color, 2)
             cv2.putText(image, "%s: %.2f" % (id2class[class_id], conf), (xmin + 2, ymin - 2),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, color)
         output_info.append([class_id, conf, xmin, ymin, xmax, ymax])
-    timestamp = get_13_timestamp()
-    filename = timestamp + ".png"
-    Image.fromarray(image).save('user_data\\'+filename)
-        # Image.fromarray(image).show()
 
-    return filename, output_info
-    # return output_info
+    if show_result:
+        Image.fromarray(image).show()
+    return output_info
     # return class_id
 
 
@@ -118,7 +107,7 @@ def run_on_video(video_path, output_video_name, conf_thresh):
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     fps = cap.get(cv2.CAP_PROP_FPS)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    writer = cv2.VideoWriter(output_video_name, fourcc, int(fps), (int(width), int(height)))
+    # writer = cv2.VideoWriter(output_video_name, fourcc, int(fps), (int(width), int(height)))
     total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     if not cap.isOpened():
         raise ValueError("Video open failed.")
@@ -128,10 +117,10 @@ def run_on_video(video_path, output_video_name, conf_thresh):
     while status:
         start_stamp = time.time()
         status, img_raw = cap.read()
+        img_raw = cv2.cvtColor(img_raw, cv2.COLOR_BGR2RGB)
+        read_frame_stamp = time.time()
         if (status):
-            img_raw = cv2.cvtColor(img_raw, cv2.COLOR_BGR2RGB)
-            read_frame_stamp = time.time()
-            img_path, answer = inference(img_raw,
+            answer = inference(img_raw,
                       conf_thresh,
                       iou_thresh=0.5,
                       target_shape=(260, 260),
@@ -154,11 +143,9 @@ def run_on_video(video_path, output_video_name, conf_thresh):
             # modify the show_pic
             img_raw_text = cv2.putText(img_raw, text, (50, 50), cv2.FONT_HERSHEY_COMPLEX, 2.0, color, 3)
             cv2.imshow('image', img_raw_text[:, :, ::-1])
-            ######################
             cv2.waitKey(1)
             inference_stamp = time.time()
-            # img = cv2.imread(img_path)
-            writer.write(img_raw_text[:, :, ::-1])
+            # writer.write(img_raw)
             write_frame_stamp = time.time()
             idx += 1
             if idx % 40 == 0 :
@@ -169,10 +156,9 @@ def run_on_video(video_path, output_video_name, conf_thresh):
             #检测到键盘输入q则退出
             if cv2.waitKey(100) & 0xff == ord('q'):
                 break
-    writer.release()
+    # writer.release()
     cap.release()
     cv2.destroyAllWindows()
-
 
 class MyThread(threading.Thread):
     def __init__(self,threadID,name,counter):
@@ -199,9 +185,6 @@ def main(img_mode,img_path,video_path):
 
 
     if img_mode:
-        ##################################################
-        # update
-        # niu
         if not img_path:
             print("请输入图片的url:")
             img_path = input()
@@ -216,50 +199,31 @@ def main(img_mode,img_path,video_path):
                 imgPath = input()
                 img = cv2.imread(imgPath)
                 exp_imgcvt(img)
-
-        ######################################################
         imgPath = img_path
         img = cv2.imread(imgPath)
-        ####################################################
-        #####niu
         # exception
         img = exp_imgcvt(img)
-        ########################################################
-        return inference(img, show_result=True, target_shape=(260, 260))
+        inference(img, show_result=True, target_shape=(260, 260))
     else:
         def exp_viocvt(video_path):
             "' :exception'"
             try:
-                out_video_path = "user_data\\video" + get_13_timestamp() + ".mp4"
-                # out_video_path = "img01.mp4"
-                print(out_video_path)
-                run_on_video(video_path, out_video_path, conf_thresh=0.5)
-                return out_video_path
+                run_on_video(video_path, '', conf_thresh=0.5)
             except Exception:
                 print("请输入正确的视频path")
                 video_path = input()
                 exp_viocvt(video_path)
-        return exp_viocvt(video_path)
+        exp_viocvt(video_path)
 
 
-def get_13_timestamp():
-    # 函数功能：获取当前时间的时间戳（13位）
-    # 13位时间戳的获取方式跟10位时间戳获取方式一样
-    # 两者之间的区别在于10位时间戳是秒级，13位时间戳是毫秒级
-    timestamp = time.time()
-    return str(int(round(timestamp) * 1000))
 
 
 ####################
-#增加线程锁
-#可以改为直接调用main函数
 ##############
-
-
-# if __name__ == '__main__':
-#     # img-mode, type=int,set 1 to run on image, 0 to run on video.
-#     # img-path', type=str, help='path to your image
-#     # video-path', type=str|int, path to your video, `0` means to use camera.
-#      main(1,'img/demo2.jpg',0)
-#     # main(img_mode=0, img_path=None,video_path=0)
-#     # main(img_mode=0, img_path=None, video_path='img/video.mp4')
+if __name__ == '__main__':
+    # img-mode, type=int,set 1 to run on image, 0 to run on video.
+    # img-path', type=str, help='path to your image
+    # video-path', type=str|int, path to your video, `0` means to use camera.
+    main(1,'img/demo2.jpg',0)
+    # main(img_mode=0, img_path=None,video_path=0)
+    # main(img_mode=0, img_path=None, video_path='img/video.mp4')
